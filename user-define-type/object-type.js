@@ -1,0 +1,12 @@
+// let users: { name: string; age: number };
+// users = { name: "Abdul Hay", age: 20 };
+// console.log(users.name);
+var users;
+users = [];
+var user1;
+user1 = { name: "Abdul Hay", age: 30 };
+users.push(user1);
+var user2;
+user2 = { name: "Asha", age: 23 };
+users.push(user2);
+console.log(users[0]["name"]);
