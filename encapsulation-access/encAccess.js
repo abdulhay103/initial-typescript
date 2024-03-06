@@ -15,18 +15,35 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var User = /** @class */ (function () {
     function User(userName, age) {
+        var _this = this;
+        this.getUser = function () {
+            console.log(_this.userName);
+        };
         this.userName = userName;
         this.age = age;
     }
     User.prototype.display = function () {
         console.log(this.userName);
     };
+    User.prototype.setUser = function (name) {
+        this.userName = name;
+    };
     return User;
 }());
+var user = new User("Asha", 45);
+user.setUser("Tasha");
+user.getUser();
 var Student = /** @class */ (function (_super) {
     __extends(Student, _super);
     function Student(userName, age, id) {
-        return _super.call(this, userName, age) || this;
+        var _this = _super.call(this, userName, age) || this;
+        _this.id = id;
+        return _this;
     }
+    Student.prototype.display = function () {
+        console.log(this.id);
+    };
     return Student;
 }(User));
+var student = new Student("Abdul Hay", 30, 10121412);
+student.display();
